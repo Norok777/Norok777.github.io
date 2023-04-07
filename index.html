@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Home</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/material-outlined/256/box-important.png">
@@ -16,7 +15,6 @@
         padding: 20px;
     }
     </style>
-
 
 
 
@@ -48,6 +46,25 @@
     }
     </style>
 
+    <!-- tablets -->
+    <style>
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      /* styles for tablets in portrait mode */
+      /* example: you can reduce the font size for better readability on smaller screens */
+      body {
+        font-size: 16px;
+      }
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      /* styles for tablets in landscape mode */
+      /* example: you can adjust the layout to fit the wider screen */
+      body {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+    </style>
 
     <table>
         <tr>
@@ -68,7 +85,7 @@
 
 <br>
     <p>
-      Hello I am Liam Malloy and I am a first year Computer Science student. I currently specialise in Java and Python.
+       Hello I am Liam Malloy and I am a first year Computer Science student. I currently specialise in Java and Python.
     </p>
 
 
@@ -79,5 +96,16 @@
     <input type="email" id="email" name="email" required>
     <button type="submit">Submit</button>
     </form>
+
+
+    <script>
+function validateForm() {
+  const email = document.getElementById("email").value;
+  if (email === "") {
+    alert("Please enter your email address");
+    return false;
+  }
+}
+</script>
 </body>
 </html>
